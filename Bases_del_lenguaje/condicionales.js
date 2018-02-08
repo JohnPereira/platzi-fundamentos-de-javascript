@@ -1,4 +1,4 @@
-const starWars7 = 'Star Wars: El Despertar de la Fuerza';
+const starWars7 = 'Star Wars: El ultimo jedi';
 const pgStarWars = 13;
 
 const nameSacha = 'Sacha';

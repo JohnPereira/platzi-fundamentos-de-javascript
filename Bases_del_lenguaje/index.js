@@ -1,5 +1,5 @@
 //let de por si es una variable
-let base = 5;
+let base = 6;
 let altura = 7;
 //variable que no puede cambiar, no se le puede dar otro valor
 const num = 1;

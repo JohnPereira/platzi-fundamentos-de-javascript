@@ -1,0 +1,15 @@
+las variables que se definen con "var" ej:
+
+var numero = 0;
+
+no es muy recomendable, ya que ensucian el scope en donde estan, por ejemplo en un for definir un [var i = 0]
+eso ensucia el scope de la funcion donde este ese for, ya que al definir var, automaticamente define esa variable en la primera linea de la funcion este donde este.
+
+para esto mejor definir variables con "let"
+
+let numero = 0;
+
+
+************
+scope global: de todo el archivo js
+scope de la funcion o local: scope dentro de una funcion

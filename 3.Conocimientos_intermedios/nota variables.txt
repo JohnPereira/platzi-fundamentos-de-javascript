@@ -1,0 +1,4 @@
+definir bien que tipo de variable ocupar:
+si la variable no va a cambiar: const
+si la variable requiere cambiar algun contexto de scope: var
+si la variable no debe manchar el scope o contexto donde este: let

@@ -10,14 +10,23 @@
     <!--setInterval ejecuta codigo a cada cierto tiempo, a diferencia
     del setTimeOut que ejecuta codigo solo una vez-->
     <h1 id="timer">han pasado 0 segundos</h1>
+    <button id="cancel-button">Cancelar</button>
     <script>
         const timer = document.getElementById('timer');
+        const $button = document.getElementById('cancel-button');
+
+        $button.addEventListener('click', () => {
+            clearInterval(interval);
+        });
+        
         let counter = 0;
-        setInterval(() => {
+        const interval = setInterval(() => {
             counter++;
             timer.textContent = `han pasado ${counter} segundos`;
             console.log('ha pasado 1 tiempo')
-        },1000)
+        },1000);
+
+       
     </script>
 </body>
 </html>

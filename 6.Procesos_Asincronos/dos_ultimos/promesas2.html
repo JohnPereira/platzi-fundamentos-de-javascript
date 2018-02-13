@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--para evitar el callback hell (codigo ilegible anidando) se usan promesas-->
+    <h1 id="agenda">Estoy despertando</h1>
+    <script>
+        const DESPERTAR = 3000;
+        const DUCHA = 2000;
+        const VESTIRSE = 2000;
+        const DESAYUNAR = 3000;
+        const PLATZI = 5000;
+        const $agenda = document.getElementById('agenda');
+
+        function despertar(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Ahora me estoy duchando, ajjaja :$')
+
+                }, DESPERTAR);
+            });
+        }
+
+        function duchar(message){
+            $agenda.textContent = message;
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Ahora estoy vistiendome')
+
+                }, DUCHA);
+            });
+        }
+
+        function vestir(message){
+            $agenda.textContent = message;
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Ahora estoy desayunando')
+
+                }, VESTIRSE);
+            });
+        }
+
+        function desayunar(message){
+            $agenda.textContent = message;
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    reject('no habia comida :(')
+
+                }, DESAYUNAR);
+            });
+        }
+
+        function error(message){
+            $agenda.style.color = 'red';
+            $agenda.textContent = message;
+        }
+
+        despertar()
+            .then(duchar)
+            .then(vestir)
+            .then(desayunar)
+            .catch(error)
+    </script>
+</body>
+</html>

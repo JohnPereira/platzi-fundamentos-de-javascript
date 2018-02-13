@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--para evitar el callback hell (codigo ilegible anidando) se usan promesas-->
+    <h1 id="agenda">Estoy despertando</h1>
+    <script>
+        const DESPERTAR = 3000;
+        const DUCHA = 2000;
+        const VESTIRSE = 2000;
+        const DESAYUNAR = 3000;
+        const PLATZI = 5000;
+        const $agenda = document.getElementById('agenda');
+
+        /*
+        const despertar = new Promise((ok,err)=>{
+
+        });
+        */
+        const despertar = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve('Ahora me estoy duchando, ajjaja :$')//n parametros
+                //reject('todo mal lo siento')
+            }, DESPERTAR);
+        });
+
+        //despertar.then(que quiero hacer si todo esta ok)
+        //despertar.catch(que quiero hacer si todo esta mal)
+        /*
+        despertar.then(()=>{
+            alert('todo esta bien');
+        })
+        */
+        //este message se puede hacer lo mismo para el reject - catch
+        despertar.then((message)=>{
+            alert(message);
+        })
+        despertar.catch(()=>{
+            alert('todo esta mal');
+        })
+    </script>
+</body>
+</html>

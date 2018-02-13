@@ -1,0 +1,9 @@
+algunos navegadores soportan algunos standard de ecmascript (aguna version)
+pero hay navegadores que no son compatibles con alguna actual, por ejemplo en internet explorer 7
+y eso hace que , ya que ecmascript son estandares que van añadiendo funcionalidades a los navegadores
+para que corran nuevas cosas de javascript, por ejemplo en IE7 no correria una arrow function por que no la reconoce
+
+paara este problema esta "BABEL":
+BABEL, de babeljs.io, es un compilador de javascript, podemos escribir codigo alli y nos ayuda a que ese codigo nos muestre 
+otra version para que se soporte en otro navegador
+por ejemplo una arrow function que se vea como una fuction normal

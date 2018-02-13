@@ -1,0 +1,15 @@
+como ejecuta el codigo javascript?
+
+pila de ejecucion o call stack:
+
+las funciones dentro del script se ejecuta en pila, agregando primero a ella el archivo.js, luego entra dentro de las funciones y va agregando cada linea de codigo en una pila y lo va ejecutando y luego que los ejecuta los quita para ir liberando la pila, la idea es no llenar esa pila con cosas que puedan bloquearla, es decir, juntar metodos que puedan detener procesos y realentizar las ejecuciones de codigo del programa.
+
+un ejemplo de traba en la pila es poner un loop como un for y tener que esperar a que finalice ese proceso.
+
+
+los metodos con funciones o callback, esas funciones internas se ejecutan en colas o queue:
+
+setTimeout(func(){},100);
+
+el func se agrega a una cola o queue (task queue)
+

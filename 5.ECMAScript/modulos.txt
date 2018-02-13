@@ -1,0 +1,52 @@
+para tener desacoplado el codigo y no un solo archivo donde le dejemos la carga completa de codigo a ejecutar, separamos el codigo en pequeños modulos.
+
+existen modulos grandes como react, angular, vuejs, etc, y pequeños que hagan cosas pequeñas como relacionarnos con el DOM de la pagina
+
+se tendran distintos modulos que hagan pequeñas tareas, como un modulo que busque datos en la bd, otro de las rutas de la app, otro modulo para el build de la app, etc...
+
+un moduo es un pedazo de codigo que permita solucionar un problema
+
++++++++++++++
+un ejemplo es encapsular el codigo en el scope de una funcion
+tambien esta System.js ***
+otro es CommonJS, que permite exportar con module.export = function area() ......
+
+//otro archivvo
+
+const triangle = require('./triangle.js');
+
+la desventaja es que CommonJS es sincrono y para ensamblar se require de un archivo que arme todo
+
+
+otra forma es AMD:
+
+define('triangle',function(){
+
+});
+
+require('./triangle.js',function(triangle){
+
+});
+
+otra forma es MODULOS DE ES 2015 (los mas utilizados)
+
+import triangle from 'triangle';
+
+export function area(x){
+
+
+}
+
+triangle.hypotenuse........
+
+importacion asincrona
+
+System
+   .import('triangle')
+   .then(triangle => {
+   //code
+   }
+   .catch(error => {
+   //code
+   })
+

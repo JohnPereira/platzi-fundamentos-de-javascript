@@ -1,0 +1,30 @@
+{
+  "name": "platzom",
+  "version": "0.1.0",
+  "description": "traductor de idioma platzo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/platzom.js -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnPereira/Platzi-paquete-npm.git"
+  },
+  "keywords": [
+    "platzom",
+    "platzi",
+    "fundamentos",
+    "de",
+    "javascript"
+  ],
+  "author": "john",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnPereira/Platzi-paquete-npm/issues"
+  },
+  "homepage": "https://github.com/JohnPereira/Platzi-paquete-npm#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}

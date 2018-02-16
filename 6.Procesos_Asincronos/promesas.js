@@ -27,6 +27,9 @@ promise
 
     })
 */
+
+//CON ESTO SOLUCIONAMOS EL CALLBACK HELL
+
 function get(URL) {
     return new Promise((resolve, reject) => { //arrow function
         const xhr = new XMLHttpRequest();
